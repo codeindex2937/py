@@ -10,6 +10,11 @@ func NewSet[K comparable]() *Set[K] {
 	}
 }
 
+func (s *Set[K]) Has(k K) bool {
+	_, exists := s.d[k]
+	return exists
+}
+
 func (s *Set[K]) Add(values ...K) bool {
 	oldSize := len(s.d)
 	for _, v := range values {
