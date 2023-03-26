@@ -94,7 +94,7 @@ func Repeat[K any](k K, times int) []K {
 
 func Range[K numeric](start, stop, step K) []K {
 	result := []K{}
-	for k := start; k < stop; {
+	for k := start; k < stop; k += step {
 		result = append(result, k)
 	}
 	return result
