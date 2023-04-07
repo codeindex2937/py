@@ -23,7 +23,7 @@ func (c *Counter[K]) Get(k K) int {
 	return 0
 }
 
-func (c *Counter[K]) Size(k K) int {
+func (c *Counter[K]) Size() int {
 	return len(c.d)
 }
 
