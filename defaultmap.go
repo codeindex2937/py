@@ -68,3 +68,7 @@ func (m DefaultMap[K, V]) Items() map[K]V {
 func (m DefaultMap[K, V]) MarshalJSON() ([]byte, error) {
 	return json.Marshal(m.d)
 }
+
+func (m DefaultMap[K, V]) UnmarshalJSON(data []byte) error {
+	return json.Unmarshal(data, &m.d)
+}
